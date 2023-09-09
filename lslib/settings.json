@@ -1,0 +1,42 @@
+{
+  "GR2": {
+    "InputPath": "",
+    "OutputPath": "",
+    "BatchInputPath": "",
+    "BatchOutputPath": "",
+    "BatchInputFormat": 0,
+    "BatchOutputFormat": 1,
+    "ConformPath": null
+  },
+  "PAK": {
+    "ExtractInputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Data\\Localization\\Voice.pak",
+    "ExtractOutputPath": "C:\\Users\\maywell\\Desktop\\voicetoolkit-bg3\\Voice",
+    "CreateInputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Voice",
+    "CreateOutputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Baldurs Gate 3\\Voice.pak",
+    "CreatePackageVersion": 0,
+    "CreatePackageCompression": 0
+  },
+  "Resources": {
+    "InputPath": "",
+    "OutputPath": "",
+    "BatchInputPath": "",
+    "BatchOutputPath": "",
+    "BatchInputFormat": 0,
+    "BatchOutputFormat": 0
+  },
+  "VirtualTextures": {
+    "GTSPath": "",
+    "DestinationPath": ""
+  },
+  "Story": {
+    "InputPath": "E:\\ssd e\\Dev\\BG3FULL\\Mods\\GustavDev\\Story\\story.div.osi",
+    "OutputPath": "",
+    "FilterText": "",
+    "FilterMatchCase": false
+  },
+  "Debugging": {
+    "SavePath": ""
+  },
+  "SelectedGame": 4,
+  "Version": "1.18.5"
+}
