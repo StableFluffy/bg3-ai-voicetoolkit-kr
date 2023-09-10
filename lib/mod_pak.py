@@ -18,8 +18,6 @@ for wem_file in wem_files:
 
 print("[+] 확장자 변환 완료")
 
-
-# Copy Folder ./Mod_Folder/Sample
 input_mod = input("모드의 이름을 지정해주세요 : ")
 input_description = input("모드의 설명을 입력해주세요 : ")
 print("[+] 폴더 복사 시작")
@@ -49,7 +47,6 @@ for attribute in root.findall(".//attribute"):
         uuid_str = str(uuid.uuid4())
         attribute.set("value", uuid_str)
 
-# 수정된 내용을 파일에 저장
 tree.write(f'./lib/Mod_Folder/{input_mod}/Mods/SampleMod/meta.lsx')
 
 with open(f'./lib/Mod_Folder/{input_mod}/Mods/SampleMod/meta.lsx', "r+") as f:
@@ -65,7 +62,10 @@ print("[+] pak 파일 생성 시작")
 source_directory = os.path.join(os.getcwd(), 'lib\Mod_Folder', input_mod)
 destination_directory = os.path.join(os.getcwd(), 'Mods', input_mod + '.pak')
 
-# divine.exe로 pak 파일 생성
+if not os.path.exists('.\lslib\Tools\divine.exe'):
+    print("divine.exe가 존재하지 않습니다. lslib을 다운받은 후 폴더 lslib 폴더에 요소를 모두 복사해주세요.")
+    exit()
+
 subprocess.run(['.\lslib\Tools\divine.exe', '-g', 'bg3', '-s', source_directory, '-d', destination_directory, '-a', 'create-package', '-c', 'none'], shell=True)
 with open(f'./Mods/{input_mod}.pak', 'rb+') as f:
   f.seek(0x15)
